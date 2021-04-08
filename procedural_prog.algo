@@ -1,4 +1,22 @@
-FUNCTION dot_product(arr1,arr2 : ARRAY_OF INTEGER) : INTEGER
+PROCEDURE dot_product(VAR arr1,arr2 : ARRAY_OF INTEGER)
+VAR
+    
+BEGIN
+    ps:=0;
+    FOR i FROM 0 TO arr1.length -1  DO
+        FOR i FROM 0 TO arr2.length -1  DO
+            ps:=ps+arr1[i]*arr2[i];
+        END_FOR    
+    END_FOR
+    whrite(ps);
+END
+
+
+
+
+
+
+FUNCTION dot_product(VAR arr1,arr2 : ARRAY_OF INTEGER) : INTEGER
 VAR
     i,ps : INTEGER;
 BEGIN
@@ -23,3 +41,4 @@ BEGIN
         whrite("the vectors are not orthogonal!!");
     END_IF
 END
+//procedure_name(List_parameters);
