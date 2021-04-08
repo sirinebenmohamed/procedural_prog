@@ -1,0 +1,25 @@
+FUNCTION dot_product(arr1,arr2 : ARRAY_OF INTEGER) : INTEGER
+VAR
+    i,ps : INTEGER;
+BEGIN
+    ps:=0;
+    FOR i FROM 0 TO arr1.length -1  DO
+        FOR i FROM 0 TO arr2.length -1  DO
+            ps:=ps+arr1[i]*arr2[i];
+        END_FOR    
+    END_FOR
+    RETURN ps ;
+END
+
+ALGORITHM orthogonal 
+VAR
+    arr1,arr2 : ARRAY_OF INTEGER
+    check : INTEGER
+BEGIN
+    check:=dot_product(arr1,arr2);
+    IF (check=0) THEN
+        whrite("the vectors are orthogonal!!");
+    ELSE
+        whrite("the vectors are not orthogonal!!");
+    END_IF
+END
